@@ -32,9 +32,11 @@
             this.panelRequestsButtons = new System.Windows.Forms.Panel();
             this.buttonRequests3 = new System.Windows.Forms.Button();
             this.buttonRequests2 = new System.Windows.Forms.Button();
-            this.buttonRequests1 = new System.Windows.Forms.Button();
             this.buttonRequests = new System.Windows.Forms.Button();
             this.panelTablesButtons = new System.Windows.Forms.Panel();
+            this.buttonCountrySportEquipment = new System.Windows.Forms.Button();
+            this.buttonCountryRings = new System.Windows.Forms.Button();
+            this.buttonCountryMat = new System.Windows.Forms.Button();
             this.buttonMats = new System.Windows.Forms.Button();
             this.buttonRings = new System.Windows.Forms.Button();
             this.buttonSportsEquipment = new System.Windows.Forms.Button();
@@ -43,12 +45,14 @@
             this.buttonMainTable = new System.Windows.Forms.Button();
             this.buttonTables = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonRequests1 = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonAddCountry = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
             this.SideBar.SuspendLayout();
             this.panelRequestsButtons.SuspendLayout();
             this.panelTablesButtons.SuspendLayout();
@@ -68,19 +72,19 @@
             this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBar.Location = new System.Drawing.Point(0, 0);
             this.SideBar.Name = "SideBar";
-            this.SideBar.Size = new System.Drawing.Size(200, 543);
+            this.SideBar.Size = new System.Drawing.Size(200, 660);
             this.SideBar.TabIndex = 0;
             // 
             // panelRequestsButtons
             // 
             this.panelRequestsButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelRequestsButtons.Controls.Add(this.button5);
             this.panelRequestsButtons.Controls.Add(this.buttonRequests3);
             this.panelRequestsButtons.Controls.Add(this.buttonRequests2);
-            this.panelRequestsButtons.Controls.Add(this.buttonRequests1);
             this.panelRequestsButtons.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRequestsButtons.Location = new System.Drawing.Point(0, 420);
+            this.panelRequestsButtons.Location = new System.Drawing.Point(0, 540);
             this.panelRequestsButtons.Name = "panelRequestsButtons";
-            this.panelRequestsButtons.Size = new System.Drawing.Size(200, 124);
+            this.panelRequestsButtons.Size = new System.Drawing.Size(200, 120);
             this.panelRequestsButtons.TabIndex = 4;
             // 
             // buttonRequests3
@@ -90,7 +94,7 @@
             this.buttonRequests3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRequests3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonRequests3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRequests3.Location = new System.Drawing.Point(0, 80);
+            this.buttonRequests3.Location = new System.Drawing.Point(0, 40);
             this.buttonRequests3.Name = "buttonRequests3";
             this.buttonRequests3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.buttonRequests3.Size = new System.Drawing.Size(200, 40);
@@ -106,7 +110,7 @@
             this.buttonRequests2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRequests2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonRequests2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRequests2.Location = new System.Drawing.Point(0, 40);
+            this.buttonRequests2.Location = new System.Drawing.Point(0, 0);
             this.buttonRequests2.Name = "buttonRequests2";
             this.buttonRequests2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.buttonRequests2.Size = new System.Drawing.Size(200, 40);
@@ -114,22 +118,7 @@
             this.buttonRequests2.Text = "Среднее количество продаж \nпредставленных товаров выше 300 тыс. шт.";
             this.buttonRequests2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRequests2.UseVisualStyleBackColor = true;
-            // 
-            // buttonRequests1
-            // 
-            this.buttonRequests1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonRequests1.FlatAppearance.BorderSize = 0;
-            this.buttonRequests1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRequests1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonRequests1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRequests1.Location = new System.Drawing.Point(0, 0);
-            this.buttonRequests1.Name = "buttonRequests1";
-            this.buttonRequests1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.buttonRequests1.Size = new System.Drawing.Size(200, 40);
-            this.buttonRequests1.TabIndex = 0;
-            this.buttonRequests1.Text = "Страны с максимальным кол-вом продаж";
-            this.buttonRequests1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRequests1.UseVisualStyleBackColor = true;
+            this.buttonRequests2.Click += new System.EventHandler(this.buttonRequests2_Click);
             // 
             // buttonRequests
             // 
@@ -138,7 +127,7 @@
             this.buttonRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRequests.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonRequests.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRequests.Location = new System.Drawing.Point(0, 380);
+            this.buttonRequests.Location = new System.Drawing.Point(0, 500);
             this.buttonRequests.Name = "buttonRequests";
             this.buttonRequests.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.buttonRequests.Size = new System.Drawing.Size(200, 40);
@@ -151,6 +140,9 @@
             // panelTablesButtons
             // 
             this.panelTablesButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelTablesButtons.Controls.Add(this.buttonCountrySportEquipment);
+            this.panelTablesButtons.Controls.Add(this.buttonCountryRings);
+            this.panelTablesButtons.Controls.Add(this.buttonCountryMat);
             this.panelTablesButtons.Controls.Add(this.buttonMats);
             this.panelTablesButtons.Controls.Add(this.buttonRings);
             this.panelTablesButtons.Controls.Add(this.buttonSportsEquipment);
@@ -160,8 +152,59 @@
             this.panelTablesButtons.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTablesButtons.Location = new System.Drawing.Point(0, 140);
             this.panelTablesButtons.Name = "panelTablesButtons";
-            this.panelTablesButtons.Size = new System.Drawing.Size(200, 240);
+            this.panelTablesButtons.Size = new System.Drawing.Size(200, 360);
             this.panelTablesButtons.TabIndex = 2;
+            // 
+            // buttonCountrySportEquipment
+            // 
+            this.buttonCountrySportEquipment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCountrySportEquipment.FlatAppearance.BorderSize = 0;
+            this.buttonCountrySportEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCountrySportEquipment.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCountrySportEquipment.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonCountrySportEquipment.Location = new System.Drawing.Point(0, 320);
+            this.buttonCountrySportEquipment.Name = "buttonCountrySportEquipment";
+            this.buttonCountrySportEquipment.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.buttonCountrySportEquipment.Size = new System.Drawing.Size(200, 40);
+            this.buttonCountrySportEquipment.TabIndex = 8;
+            this.buttonCountrySportEquipment.Text = "Учёт спортивных снарядов";
+            this.buttonCountrySportEquipment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCountrySportEquipment.UseVisualStyleBackColor = true;
+            this.buttonCountrySportEquipment.Click += new System.EventHandler(this.buttonCountrySportEquipment_Click);
+            // 
+            // buttonCountryRings
+            // 
+            this.buttonCountryRings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCountryRings.FlatAppearance.BorderSize = 0;
+            this.buttonCountryRings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCountryRings.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCountryRings.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonCountryRings.Location = new System.Drawing.Point(0, 280);
+            this.buttonCountryRings.Name = "buttonCountryRings";
+            this.buttonCountryRings.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.buttonCountryRings.Size = new System.Drawing.Size(200, 40);
+            this.buttonCountryRings.TabIndex = 7;
+            this.buttonCountryRings.Text = "Учёт рингов";
+            this.buttonCountryRings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCountryRings.UseVisualStyleBackColor = true;
+            this.buttonCountryRings.Click += new System.EventHandler(this.buttonCountryRings_Click);
+            // 
+            // buttonCountryMat
+            // 
+            this.buttonCountryMat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCountryMat.FlatAppearance.BorderSize = 0;
+            this.buttonCountryMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCountryMat.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCountryMat.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonCountryMat.Location = new System.Drawing.Point(0, 240);
+            this.buttonCountryMat.Name = "buttonCountryMat";
+            this.buttonCountryMat.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.buttonCountryMat.Size = new System.Drawing.Size(200, 40);
+            this.buttonCountryMat.TabIndex = 6;
+            this.buttonCountryMat.Text = "Учёт матов";
+            this.buttonCountryMat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCountryMat.UseVisualStyleBackColor = true;
+            this.buttonCountryMat.Click += new System.EventHandler(this.buttonCountryMat_Click);
             // 
             // buttonMats
             // 
@@ -178,6 +221,7 @@
             this.buttonMats.Text = "Маты";
             this.buttonMats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMats.UseVisualStyleBackColor = true;
+            this.buttonMats.Click += new System.EventHandler(this.buttonMats_Click);
             // 
             // buttonRings
             // 
@@ -194,6 +238,7 @@
             this.buttonRings.Text = "Ринги";
             this.buttonRings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRings.UseVisualStyleBackColor = true;
+            this.buttonRings.Click += new System.EventHandler(this.buttonRings_Click);
             // 
             // buttonSportsEquipment
             // 
@@ -210,6 +255,7 @@
             this.buttonSportsEquipment.Text = "Спортивные снаряды";
             this.buttonSportsEquipment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSportsEquipment.UseVisualStyleBackColor = true;
+            this.buttonSportsEquipment.Click += new System.EventHandler(this.buttonSportsEquipment_Click);
             // 
             // buttonCountries
             // 
@@ -286,16 +332,32 @@
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 0;
             // 
+            // buttonRequests1
+            // 
+            this.buttonRequests1.FlatAppearance.BorderSize = 0;
+            this.buttonRequests1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRequests1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonRequests1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonRequests1.Location = new System.Drawing.Point(100, 371);
+            this.buttonRequests1.Name = "buttonRequests1";
+            this.buttonRequests1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.buttonRequests1.Size = new System.Drawing.Size(200, 40);
+            this.buttonRequests1.TabIndex = 0;
+            this.buttonRequests1.Text = "Страны с максимальным кол-вом продаж";
+            this.buttonRequests1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRequests1.UseVisualStyleBackColor = true;
+            // 
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.MainPanel.Controls.Add(this.panel2);
             this.MainPanel.Controls.Add(this.dataGridView1);
+            this.MainPanel.Controls.Add(this.buttonRequests1);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(200, 0);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.MainPanel.Size = new System.Drawing.Size(660, 543);
+            this.MainPanel.Size = new System.Drawing.Size(660, 660);
             this.MainPanel.TabIndex = 1;
             // 
             // panel2
@@ -304,7 +366,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.buttonAddCountry);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(25, 440);
+            this.panel2.Location = new System.Drawing.Point(25, 557);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(635, 103);
             this.panel2.TabIndex = 1;
@@ -358,18 +420,34 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(30, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(600, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(600, 400);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button5.Location = new System.Drawing.Point(0, 80);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(200, 40);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "Максимальное количество продаж";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 543);
+            this.ClientSize = new System.Drawing.Size(860, 660);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.SideBar);
             this.Name = "MainForm";
@@ -406,7 +484,11 @@
         private Panel panel2;
         
         private Button button2;
-        private Button button1;
+        private Button updateCountryButton;
         private Button buttonAddCountry;
+        private Button buttonCountrySportEquipment;
+        private Button buttonCountryRings;
+        private Button buttonCountryMat;
+        private Button button5;
     }
 }

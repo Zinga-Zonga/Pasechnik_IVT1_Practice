@@ -1,6 +1,6 @@
 ﻿namespace Pasechnik_IVT1_Practice.View
 {
-    partial class CountryForm
+    partial class CountryAddForm
     {
         /// <summary>
         /// Required designer variable.
@@ -47,6 +47,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Название";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(37, 58);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(25, 25);
+            this.id.TabIndex = 1;
+            this.id.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // name
             // 
@@ -99,6 +107,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Ok";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CountryForm
             // 
@@ -125,6 +134,7 @@
 
         private Label label1;
         private TextBox name;
+        private TextBox id;
         private Label label2;
         private TextBox population;
         private Label label3;

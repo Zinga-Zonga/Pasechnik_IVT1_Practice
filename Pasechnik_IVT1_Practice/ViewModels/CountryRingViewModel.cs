@@ -14,5 +14,6 @@ namespace Pasechnik_IVT1_Practice.ViewModels
         public string CountryName { get; set; }
         public int RingId { get; set; }
         public string RingName { get; set; }
+        public int Amount { get; set; }
     }
 }

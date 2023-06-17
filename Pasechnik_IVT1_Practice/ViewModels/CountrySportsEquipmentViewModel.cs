@@ -14,5 +14,6 @@ namespace Pasechnik_IVT1_Practice.ViewModels
         public string CountryName { get; set; }
         public int SportsEquipmentId { get; set; }
         public string SportsEquipmentName { get; set; }
+        public int Amount { get; set; }
     }
 }

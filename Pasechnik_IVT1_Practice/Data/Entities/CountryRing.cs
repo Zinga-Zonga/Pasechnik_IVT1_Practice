@@ -13,5 +13,6 @@ namespace Pasechnik_IVT1_Practice.Data.Entities
         public Country Country { get; set; }
         public int RingId { get; set; }
         public Ring Ring { get; set; }
+        public int Amount { get; set; }
     }
 }
