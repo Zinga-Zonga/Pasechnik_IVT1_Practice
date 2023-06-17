@@ -33,6 +33,15 @@ namespace Pasechnik_IVT1_Practice.Services
             }
             return regions;
         }
+        public Data.Entities.Region GetById(int id)
+        {
+            Data.Entities.Region region = new Data.Entities.Region();
+            using (Data.ApplicationContext db = new Data.ApplicationContext())
+            {
+                region = db.Regions.Where(f => f.Id == id).First();
+            }
+            return region;
+        }
         //Delate
         public void Delate(Data.Entities.Region region)
         {

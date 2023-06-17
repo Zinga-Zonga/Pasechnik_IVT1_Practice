@@ -10,45 +10,56 @@ namespace Pasechnik_IVT1_Practice.Services
     internal class CountryRingsService
     {
         //Create
-        public void Add(CountryMat countryMat)
+        public void Add(CountryRing countryRing)
         {
-            if (countryMat != null)
+            if (countryRing != null)
             {
                 using (Data.ApplicationContext db = new Data.ApplicationContext())
                 {
-                    db.Country_Mats.Add(countryMat);
+                    db.Country_Rings.Add(countryRing);
                     db.SaveChanges();
                 }
             }
 
         }
         //Read
-        public List<CountryMat> GetList()
+        public List<CountryRing> GetList()
         {
-            List<CountryMat> countryMats = new List<CountryMat>();
+            List<CountryRing> countryRings = new List<CountryRing>();
             using (Data.ApplicationContext db = new Data.ApplicationContext())
             {
-                countryMats = db.Country_Mats.ToList();
+                countryRings = db.Country_Rings.ToList();
                 db.SaveChanges();
             }
-            return countryMats;
+            return countryRings;
+        }
+        public CountryRing GetById(int id)
+        {
+            CountryRing countryRing = new CountryRing();
+            using (Data.ApplicationContext db = new Data.ApplicationContext())
+            {
+                countryRing = (CountryRing)db.Country_Rings.Where(f => f.Id == id).First();
+
+
+            }
+            return countryRing;
         }
         //Delate
-        public void Delate(CountryMat countryMat)
+        public void Delate(CountryRing countryRing)
         {
             using (Data.ApplicationContext db = new Data.ApplicationContext())
             {
-                db.Country_Mats.Remove(countryMat);
+                db.Country_Rings.Remove(countryRing);
                 db.SaveChanges();
             }
         }
-        public void DelateRange(CountryMat[] countryMats)
+        public void DelateRange(CountryRing[] countryRings)
         {
             using (Data.ApplicationContext db = new Data.ApplicationContext())
             {
-                foreach (CountryMat countryMat in countryMats)
+                foreach (CountryRing countryRing in countryRings)
                 {
-                    db.Country_Mats.Remove(countryMat);
+                    db.Country_Rings.Remove(countryRing);
 
                 }
                 db.SaveChanges();
@@ -56,11 +67,11 @@ namespace Pasechnik_IVT1_Practice.Services
             }
         }
         //Update
-        public void Update(CountryMat countryMat)
+        public void Update(CountryRing countryRing)
         {
             using (Data.ApplicationContext db = new Data.ApplicationContext())
             {
-                db.Country_Mats.Update(countryMat);
+                db.Country_Rings.Update(countryRing);
                 db.SaveChanges();
             }
         }

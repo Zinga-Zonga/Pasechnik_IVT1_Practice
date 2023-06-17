@@ -33,6 +33,15 @@ namespace Pasechnik_IVT1_Practice.Services
             }
             return sportsEquipments;
         }
+        public SportsEquipment GetById(int id)
+        {
+            SportsEquipment sportsEquipment = new SportsEquipment();
+            using (Data.ApplicationContext db = new Data.ApplicationContext())
+            {
+                sportsEquipment = (SportsEquipment)db.Sports_Equipments.Where(f => f.Id == id).First();
+            }
+            return sportsEquipment;
+        }
         //Delate
         public void Delate(SportsEquipment sportsEquipment)
         {

@@ -33,6 +33,15 @@ namespace Pasechnik_IVT1_Practice.Services
             }
             return mats;
         }
+        public Mat GetById(int id)
+        {
+            Mat mat = new Mat();
+            using (Data.ApplicationContext db = new Data.ApplicationContext())
+            {
+                mat = (Mat)db.Mats.Where(f => f.Id == id).First();
+            }
+            return mat;
+        }
         //Delate
         public void Delate(Mat mat)
         {

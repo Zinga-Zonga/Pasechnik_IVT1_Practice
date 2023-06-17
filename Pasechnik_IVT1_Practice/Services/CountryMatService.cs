@@ -33,6 +33,17 @@ namespace Pasechnik_IVT1_Practice.Services
             }
             return countryMats;
         }
+        public CountryMat GetById(int id)
+        {
+            CountryMat countryMat = new CountryMat();
+            using (Data.ApplicationContext db = new Data.ApplicationContext())
+            {
+                countryMat = (CountryMat)db.Country_Mats.Where(f => f.Id == id).First();
+
+                
+            }
+            return countryMat;
+        }
         //Delate
         public void Delate(CountryMat countryMat)
         {

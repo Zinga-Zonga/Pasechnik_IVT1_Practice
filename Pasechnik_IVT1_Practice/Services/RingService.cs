@@ -33,6 +33,15 @@ namespace Pasechnik_IVT1_Practice.Services
             }
             return rings;
         }
+        public Ring GetById(int id)
+        {
+            Ring ring = new Ring();
+            using (Data.ApplicationContext db = new Data.ApplicationContext())
+            {
+                ring = (Ring)db.Rings.Where(f => f.Id == id).First();
+            }
+            return ring;
+        }
         //Delate
         public void Delate(Ring ring)
         {
